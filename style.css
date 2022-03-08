@@ -89,58 +89,59 @@
         #projects {
             padding-top: 100px;
             width: 80%;
-            display: grid;
-            grid-template-columns: 50% 50%;
-        }
-        
-        .project-tile {
-            margin-left: 1em;
-            margin-right: 1em;
-        }
-        
-        .project-tile img {
-            width: 100%;
-            height: auto;
-        }
-        
-        .project-tile a {
             display: flex;
             flex-direction: column;
-            align-items: center;
-            background-color: #2F3740;
-            margin-bottom: 1em;
-            font-weight: 900;
+            grid-template-columns: 50% 50%;
+            
+        }
+        
+        .project-container{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .project-tab{
+            width: 50%;
+            border-radius: 10px;
+        }
+        .project-tab a{
+            background-color: white;
+        }
+
+        .project-tab img{
+            width: 100%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            box-shadow: 10px 10px 10px rgba(0,0,0,0.1);
+        }
+
+        .project-name{
+            background-color: white;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            font-size: large;
+            font-weight: 600;
+        }
+        
+        .project-tab:hover{
+            box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+            transition: 200ms;
+        }
+
+        #container{
+            margin-top: 80px;
             color: white;
-            font-size: larger;
-        }
-        
-        .project-tile a p span {
-            color: #2F3740;
-            font-weight: 1000;
-        }
-        
-        .project-tile a:hover p span {
-            animation-name: appear;
-            animation-duration: 500ms;
-            animation-fill-mode: forwards;
+            padding: 0px 40px;
         }
         
         @keyframes appear {
             100% {
                 color: orange;
             }
-        }
-        
-        .project-title {
-            width: 100%;
-            height: 100%;
-            display: grid;
-            grid-template-columns: 10% 80% 10%;
-        }
-        
-        .code {
-            display: flex;
-            align-items: center;
         }
         
         #contact {
@@ -227,15 +228,9 @@
         }
         
         @media (max-width: 760px) {
-            #projects {
-                padding-top: 100px;
-                width: 80%;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-            .project-tile {
-                width: 100%;
+            
+            .project-tab{
+                width: 500px;
             }
             #contact-list {
                 padding: 0px;
